@@ -1,0 +1,106 @@
+<div class="col-md-12" ng-controller="RegisterCtrl">
+	<div class="col-sm-6 col-sm-offset-3">
+		<div class="well">
+			<form class="form-horizontal" ng-submit="register()">
+			  <fieldset>
+			    <legend>Register</legend>
+			    <div class="alert alert-dismissible alert-danger" ng-show="registerError">
+					  <button type="button" class="close" data-dismiss="alert">&times;</button>
+					  <p>Please fill in all the fields.</p>
+					</div>
+					<div class="alert alert-dismissible alert-danger" ng-show="passwordMatchError">
+					  <button type="button" class="close" data-dismiss="alert">&times;</button>
+					  <p>Passwords do not match.</p>
+					</div>
+			    <div class="form-group">
+			      <label for="firstName" class="col-lg-2 control-label">First Name</label>
+			      <div class="col-lg-10">
+			        <input type="text" class="form-control" id="firstName" placeholder="First name" ng-model="newUser.firstName">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="lastName" class="col-lg-2 control-label">Last Name</label>
+			      <div class="col-lg-10">
+			        <input type="text" class="form-control" id="lastName" placeholder="Last name" ng-model="newUser.lastName">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="email" class="col-lg-2 control-label">Email</label>
+			      <div class="col-lg-10">
+			        <input type="email" class="form-control" id="email" placeholder="Email" ng-model="newUser.email">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="username" class="col-lg-2 control-label">Username</label>
+			      <div class="col-lg-10">
+			        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="newUser.username">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="password" class="col-lg-2 control-label">Password</label>
+			      <div class="col-lg-10">
+			        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="newUser.password">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="confirmPassword" class="col-lg-2 control-label">Confirm Password</label>
+			      <div class="col-lg-10">
+			        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" ng-model="newUser.confirmPassword">
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label class="col-lg-2 control-label">Gender</label>
+			      <div class="col-lg-10">
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="gender" id="male" value="male" ng-model="newUser.gender">
+			            Male
+			          </label>
+			        </div>
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="gender" id="female" value="female" ng-model="newUser.gender">
+			            Female
+			          </label>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label class="col-lg-2 control-label">Language</label>
+			      <div class="col-lg-10">
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="language" id="english" value="english" ng-model="newUser.language">
+			            English
+			          </label>
+			        </div>
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="language" id="french" value="french" ng-model="newUser.language">
+			            French
+			          </label>
+			        </div>
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="language" id="both" value="both" ng-model="newUser.language">
+			            Both
+			          </label>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="address" class="col-lg-2 control-label">Address</label>
+			      <div class="col-lg-10">
+			        <textarea class="form-control" rows="3" id="address" ng-model="newUser.address"></textarea>
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <div class="col-lg-10 col-lg-offset-2">
+			        <button type="submit" class="btn btn-primary">Register</button>
+			      </div>
+			    </div>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>

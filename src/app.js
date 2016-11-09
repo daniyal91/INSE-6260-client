@@ -10,6 +10,10 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider) {
         url: '/login',
         templateUrl: 'app/login/login.html'
     });
+    $stateProvider.state('register', {
+        url: '/register',
+        templateUrl: 'app/register/register.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 
