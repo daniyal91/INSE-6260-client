@@ -48,6 +48,23 @@
 			        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" ng-model="newUser.confirmPassword">
 			      </div>
 			    </div>
+					<div class="form-group">
+			      <label class="col-lg-2 control-label">Register as</label>
+			      <div class="col-lg-10">
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="role" id="patient" value="patient" ng-model="newUser.type">
+			            Patient
+			          </label>
+			        </div>
+			        <div class="radio">
+			          <label>
+			            <input type="radio" name="role" id="nurse" value="nurse" ng-model="newUser.type">
+			            Nurse
+			          </label>
+			        </div>
+			      </div>
+			    </div>
 			    <div class="form-group">
 			      <label class="col-lg-2 control-label">Gender</label>
 			      <div class="col-lg-10">
