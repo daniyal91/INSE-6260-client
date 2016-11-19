@@ -12,7 +12,7 @@ angular.module('app').controller('PatientDashboardCtrl',function($scope,$rootSco
 
 	$scope.getRequests = function()
 	{
-		requestService.requestResource.query(function(data){
+		requestService.requestResource.query({patient_id: $rootScope.user.id},function(data){
 			$scope.requests = data.requests;
 		});
 	};
