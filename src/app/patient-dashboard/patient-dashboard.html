@@ -1,4 +1,24 @@
 <div class="col-md-12" ng-controller="PatientDashboardCtrl" ng-init="init()">
 	<h3>Welcome {{user.first_name}} {{user.last_name}}!</h3>
 	<a href="#/request">Create new request</a>
+	
+	<div class="row">
+		<div class="col-sm-6">
+			<h2>Submitted Requests</h2>
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>Service</th>
+					<th>Preferred Date</th>
+					<th>Preferred Time</th>
+					<th>Preferred Location</th>
+				</tr>
+				<tr ng-repeat="request in requests">
+					<td>{{request.service}}</td>
+					<td>{{request.preferred_date}}</td>
+					<td>{{request.preferred_time}}</td>
+					<td>{{request.preferred_location}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 </div>
