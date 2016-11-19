@@ -20,6 +20,7 @@
   <script src="vendor/moment/moment.js"></script>
   <script src="vendor/angular/angular.js"></script>
   <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="vendor/angular-cookies/angular-cookies.js"></script>
   <script src="vendor/angular-animate/angular-animate.js"></script>
   <script src="vendor/angular-resource/angular-resource.js"></script>
   <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -34,6 +35,11 @@
   <script src="app/login/login-controller.js"></script>
   <script src="app/register/register-controller.js"></script>
   <script src="app/components/service/userService.js"></script>
+  <script src="app/components/chss-cookies/chss-cookies.js"></script>
+  <script src="app/components/chss-auth/chss-auth.js"></script>
+  <script src="app/patient-dashboard/patient-dashboard-controller.js"></script>
+  <script src="app/logout/logout-controller.js"></script>
+  <script src="app/request/request-controller.js"></script>
   <!-- Add New Component JS Above -->
   
   <div>
@@ -52,9 +58,13 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" ng-show="!isAuthenticated">
             <li><a href="#/register">Register</a></li>
             <li><a href="#/login">Login</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right" ng-show="isAuthenticated">
+            <li><a href="">Logged in as {{user.username}}</a></li>
+            <li><a href="#/logout">Logout</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
