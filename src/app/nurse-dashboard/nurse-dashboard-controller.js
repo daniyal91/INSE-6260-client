@@ -1,4 +1,4 @@
-angular.module('app').controller('PatientDashboardCtrl',function($scope,$rootScope,$state,requestService){
+angular.module('app').controller('NurseDashboardCtrl',function($scope,$rootScope,$state){
 
 	$scope.init = function()
 	{

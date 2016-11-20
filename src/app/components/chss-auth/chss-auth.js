@@ -216,7 +216,7 @@ angular.module('chss.auth', ['ui.router','ngCookies'])
 		}
 		if(chssCookies.get("role") === "Nurse")
 		{
-			$state.go("home");
+			$state.go("nurse-dashboard");
 		}
 		if(chssCookies.get("role") === "Admin")
 		{

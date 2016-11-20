@@ -32,6 +32,10 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider, chssAu
         url: '/all-requests',
         templateUrl: 'app/all-requests/all-requests.html'
     });
+    $stateProvider.state('nurse-dashboard', {
+        url: '/nurse-dashboard',
+        templateUrl: 'app/nurse-dashboard/nurse-dashboard.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 
