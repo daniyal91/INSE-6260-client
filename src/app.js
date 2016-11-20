@@ -28,6 +28,10 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider, chssAu
         url: '/request',
         templateUrl: 'app/request/request.html'
     });
+    $stateProvider.state('all-requests', {
+        url: '/all-requests',
+        templateUrl: 'app/all-requests/all-requests.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 

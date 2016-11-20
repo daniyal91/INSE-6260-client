@@ -89,7 +89,11 @@ angular.module('chss.auth', ['ui.router','ngCookies'])
 					this.setToken(chssCookies.get("token"));
 					that.config.isAuthenticated = true;
 					var user = chssCookies.get("user");
+					var token = chssCookies.get("token");
+					var role = chssCookies.get("role");
 					$rootScope.user = user;
+					$rootScope.token = token;
+					$rootScope.role = role;
 					$rootScope.isAuthenticated = true;
 					return true;
 				}
