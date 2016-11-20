@@ -36,6 +36,14 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider, chssAu
         url: '/nurse-dashboard',
         templateUrl: 'app/nurse-dashboard/nurse-dashboard.html'
     });
+    $stateProvider.state('all-availabilities', {
+        url: '/all-availabilities',
+        templateUrl: 'app/all-availabilities/all-availabilities.html'
+    });
+    $stateProvider.state('availability', {
+        url: '/availability',
+        templateUrl: 'app/availability/availability.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 

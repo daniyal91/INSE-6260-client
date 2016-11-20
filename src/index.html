@@ -43,6 +43,9 @@
   <script src="app/components/service/requestService.js"></script>
   <script src="app/all-requests/all-requests-controller.js"></script>
   <script src="app/nurse-dashboard/nurse-dashboard-controller.js"></script>
+  <script src="app/all-availabilities/all-availabilities-controller.js"></script>
+  <script src="app/availability/availability-controller.js"></script>
+  <script src="app/components/service/availabilityService.js"></script>
   <!-- Add New Component JS Above -->
   
   <div>
@@ -74,8 +77,8 @@
               <li class="divider"></li>
               <li ng-show="role === 'Patient'"><a href="#/request">Create new request</a></li>
               <li ng-show="role === 'Patient'"><a href="#/all-requests">View all requests</a></li>
-              <li ng-show="role === 'Nurse'"><a href="">Availability Calendar</a></li>
-              <li ng-show="role === 'Nurse'"><a href="">Update Availability Calendar</a></li>
+              <li ng-show="role === 'Nurse'"><a href="#/all-availabilities">Availability Calendar</a></li>
+              <li ng-show="role === 'Nurse'"><a href="#/availability">Update Availability Calendar</a></li>
               <li class="divider"></li>
               <li><a href="#/logout">Logout</a></li>
             </ul>

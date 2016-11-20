@@ -1,0 +1,27 @@
+<div class="col-md-12" ng-controller="AllAvailabilitiesCtrl" ng-init="init()">
+	
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Nurse Availabilities</h2>
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>Date</th>
+					<th>Available Time 1</th>
+					<th>Available Time 2</th>
+					<th>Available Time 3</th>
+					<th>Available Time 4</th>
+					<th>Available Time 5</th>
+				</tr>
+				<tr ng-repeat="availability in availabilities">
+					<td>{{availability.available_date}}</td>
+					<td>{{availability.available_time1}}</td>
+					<td>{{availability.available_time2}}</td>
+					<td>{{availability.available_time3}}</td>
+					<td>{{availability.available_time4}}</td>
+					<td>{{availability.available_time5}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</div>
