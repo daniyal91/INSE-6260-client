@@ -9,13 +9,17 @@
 				<tr>
 					<th>Service</th>
 					<th>Preferred Date</th>
-					<th>Preferred Time</th>
+					<th>Preferred Time 1</th>
+					<th>Preferred Time 2</th>
+					<th>Preferred Time 3</th>
 					<th>Preferred Location</th>
 				</tr>
 				<tr ng-repeat="request in requests">
 					<td>{{request.service}}</td>
 					<td>{{request.preferred_date}}</td>
-					<td>{{request.preferred_time}}</td>
+					<td>{{request.preferred_time1}}</td>
+					<td>{{request.preferred_time2}}</td>
+					<td>{{request.preferred_time3}}</td>
 					<td>{{request.preferred_location}}</td>
 				</tr>
 			</table>

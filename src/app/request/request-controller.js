@@ -1,6 +1,6 @@
 angular.module('app').controller('RequestCtrl',function($scope,$rootScope,$state,requestService){
 
-	$scope.newRequest = {patientId: $scope.user.id, preferredDate: "", preferredTime: "", preferredLocation: "", serviceId: ""};
+	$scope.newRequest = {patientId: $scope.user.id, preferredDate: "", preferredTime1: "", preferredTime2: "", preferredTime3: "", preferredLocation: "", serviceId: ""};
 
 	$scope.init = function()
 	{
@@ -24,6 +24,6 @@ angular.module('app').controller('RequestCtrl',function($scope,$rootScope,$state
 		requestService.requestResource.save($scope.newRequest, function(data){
 			$state.go("patient-dashboard");
 		});
-	}
+	};
 
 });

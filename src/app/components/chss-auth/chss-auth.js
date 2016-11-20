@@ -193,9 +193,9 @@ angular.module('chss.auth', ['ui.router','ngCookies'])
 		{
 			console.log("User not authenticated");
 			return;
-			event.preventDefault();
-			// $rootScope.$broadcast("event:auth:error");
-			$state.go("home");
+			// event.preventDefault();
+			// // $rootScope.$broadcast("event:auth:error");
+			// $state.go("home");
 		}
 		else
 		{
