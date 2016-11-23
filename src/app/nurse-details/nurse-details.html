@@ -1,0 +1,28 @@
+<div class="col-md-12" ng-controller="NurseDetailsCtrl" ng-init="init()">
+	<div class="col-sm-6 col-sm-offset-3">
+		<div class="well">
+			<form class="form-horizontal" ng-submit="updateSkils()">
+			  <fieldset>
+			    <legend>Nurse Skills</legend>
+			    <div class="form-group">
+			      <label for="Skills" class="col-lg-2 control-label">Skills selected</label>
+			      <div class="col-lg-10" ng-repeat="service in nurseSkills">
+			        <input type="checkbox" value="{{service.id}}" ng-checked="true" ng-model="selectedNurseSkills[service.id]"> {{service.name}}
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <label for="Skills" class="col-lg-2 control-label">Skills not selected</label>
+			      <div class="col-lg-10" ng-repeat="service in notNurseSkills">
+			        <input type="checkbox" value="{{service.id}}" ng-checked="false" ng-model="selectedNurseSkills[service.id]"> {{service.name}}
+			      </div>
+			    </div>
+			    <div class="form-group">
+			      <div class="col-lg-10 col-lg-offset-2">
+			        <button type="submit" class="btn btn-primary">Submit</button>
+			      </div>
+			    </div>
+			  </fieldset>
+			</form>
+		</div>
+	</div>
+</div>

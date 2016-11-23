@@ -44,6 +44,14 @@ angular.module('app').config(function($stateProvider, $urlRouterProvider, chssAu
         url: '/availability',
         templateUrl: 'app/availability/availability.html'
     });
+    $stateProvider.state('nurse-details', {
+        url: '/nurse-details',
+        templateUrl: 'app/nurse-details/nurse-details.html'
+    });
+    $stateProvider.state('nurse-details-all', {
+        url: '/nurse-details-all',
+        templateUrl: 'app/nurse-details-all/nurse-details-all.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
 
